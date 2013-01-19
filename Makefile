@@ -9,7 +9,7 @@ dir_guard = @mkdir -p $(@D)
 
 BIN = ./bin/$(PRODUCT_NAME)
 TEST = ./bin/test-$(PRODUCT_NAME)
-SOURCES = ./src/*.rs
+SOURCES = $(shell find ./src -name "*.r[sc]")
 CRATE = ./src/$(PRODUCT_NAME).rs
 
 .PHONY: all run test clean

@@ -1,5 +1,10 @@
 extern mod std;
 
+mod module;
+mod nested_module {
+    mod submodule;
+}
+
 #[test]
 fn test_testing() {
     assert( 1 == 1 );
@@ -12,5 +17,5 @@ fn test_failing() {
 }
 
 fn main() {
-    io::println("Hello template.");
+    io::println(module::greeter(nested_module::submodule::world()));
 }
