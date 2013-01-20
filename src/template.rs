@@ -25,10 +25,10 @@ fn test_failing() {
 }
 
 fn main() {
-    // Explict paths
+    // Explicit paths
     io::println(module::greeter(nested_module::submodule::world()));
 
-    // Implict paths -- made possible by use statements
+    // Implicit paths -- made possible by use statements
     println(greeter(world()));
 
     // Renamed -- made possible by use .. = statements
