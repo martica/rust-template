@@ -1,0 +1,13 @@
+#[link(name = "template",
+       vers = "0.0",
+       author = "Tyler Bindon",
+       url = "https://github.com/martica/template")];
+
+#[comment = "Rust project template"];
+#[license = "MIT"];
+
+#[allow(non_implicitly_copyable_typarams)];
+
+extern mod std;
+
+mod template;

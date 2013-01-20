@@ -3,8 +3,9 @@
 ##To customize the template:
 
 1. Change the product name in the Makefile
-2. Rename src/template.rs to the new name
-3. Change at least the name in the license file
+2. Rename src/template.rs and src/template.rc to the new name
+3. Edit src/template.rc and change the name, author, url, etc
+4. Change at least the name in the license file
 
 ##Makefile targets:
 
@@ -21,8 +22,3 @@
 Owned pointers to strings (~str) aren't currently implicitly copyable, but are the most well supported string
 type. (https://github.com/mozilla/rust/issues/2770)
 
-
-##Possible TODOS:
-
-- Research crates and replace template.rs with template.rc
-- Add a library template 

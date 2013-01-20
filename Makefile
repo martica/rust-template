@@ -1,7 +1,7 @@
 PRODUCT_NAME = template
 
 RUSTENV = RUST_LOG=rustc=1,::rt::backtrace
-RUSTOPTS ?= -A non-implicitly-copyable-typarams
+RUSTOPTS ?= 
 RUSTC ?= rustc
 RUST = $(RUSTENV) $(RUSTC) $(RUSTOPTS)
 
@@ -10,7 +10,7 @@ dir_guard = @mkdir -p $(@D)
 BIN = ./bin/$(PRODUCT_NAME)
 TEST = ./bin/test-$(PRODUCT_NAME)
 SOURCES = $(shell find ./src -name "*.r[sc]")
-CRATE = ./src/$(PRODUCT_NAME).rs
+CRATE = ./src/$(PRODUCT_NAME).rc
 
 .PHONY: all run test clean
 
